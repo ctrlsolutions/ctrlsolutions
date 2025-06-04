@@ -1,27 +1,38 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted,computed  } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+
 gsap.registerPlugin(ScrollTrigger)
 
-const props = defineProps<{
-  tag?: string
-  level?: number
-  animated?: boolean
-}>()
+const props = defineProps({
+  tag: {
+    type: String,
+    default: undefined
+  },
+  level: {
+    type: Number,
+    default: undefined,
+    validator: (value: number) => value >= 1 && value <= 6
+  },
+  animated: {
+    type: Boolean,
+    default: true
+  }
+})
 
-const headingRef = ref(null)
+const headingRef = ref<HTMLElement | null>(null)
 
-const headingTag = () => {
+const headingTag = computed(() => {
   if (props.tag) return props.tag
   if (props.level) return `h${props.level}`
   return 'h2'
-}
+})
 
 onMounted(() => {
-  if (props.animated !== false && headingRef.value) {
-    const element = headingRef.value as HTMLElement
+  if (props.animated && headingRef.value) {
+    const element = headingRef.value
     const text = element.textContent || ''
     const words = text.split(' ')
     
@@ -61,7 +72,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <component :is="headingTag()" ref="headingRef" class="animated-heading">
+  <component :is="headingTag" ref="headingRef" class="animated-heading">
     <slot></slot>
   </component>
 </template>

@@ -106,7 +106,7 @@ onMounted(() => {
     <!-- Header -->
     <section class="team-header">
       <div class="container">
-        <AnimatedHeading level="1">Our Team</AnimatedHeading>
+        <AnimatedHeading :level="1">Our Team</AnimatedHeading>
         <p>Meet the talented individuals behind our innovative projects</p>
       </div>
     </section>
@@ -128,7 +128,7 @@ onMounted(() => {
     <section class="join-team-section section">
       <div class="container">
         <div class="join-team-content">
-          <AnimatedHeading level="2">The Team</AnimatedHeading>
+          <AnimatedHeading :level="2">The Team</AnimatedHeading>
           <p>We're always looking for talented individuals to join our team. If you're passionate about computer science and innovation, we'd love to hear from you!</p>
         </div>
       </div>

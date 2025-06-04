@@ -3,9 +3,10 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import gsap from 'gsap'
 
-const props = defineProps<{
+const { isDarkMode } = defineProps<{
   isDarkMode: boolean
 }>()
+
 
 const emit = defineEmits(['toggle-theme'])
 

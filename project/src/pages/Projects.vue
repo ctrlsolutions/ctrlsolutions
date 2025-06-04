@@ -15,7 +15,8 @@ const projects = ref([
     description: 'An app that helps restaurants and fruit suppliers manage their inventory using AI. The app uses AI for image recognition to check the freshness of fruits, predict spoilage, and help businesses keep track of their stock to reduce waste. This app was developed during a hackathon and our team placed 8th out of 18 groups.',
     image: 'https://www.fruitsmith.com/pub/media/mageplaza/blog/post/r/e/reasons_that_make_fruit_basket_a_suitable_gift_.jpg',
     technologies: ['Vue.js', 'Django', 'Roboflow'],
-    category: 'Machine Learning'
+    category: 'Machine Learning',
+    link: 'https://supplai.ctrlsolutions.space/'
   },
   {
     id: 2,
@@ -110,7 +111,7 @@ onMounted(() => {
     <!-- Header -->
     <section class="projects-header">
       <div class="container">
-        <AnimatedHeading level="1">Our Projects</AnimatedHeading>
+        <AnimatedHeading :level="1">Our Projects</AnimatedHeading>
         <p>Explore our innovative computer science projects showcasing cutting-edge technology and research</p>
       </div>
     </section>

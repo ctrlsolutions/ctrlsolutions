@@ -79,7 +79,7 @@ onMounted(() => {
     <!-- Header -->
     <section class="contact-header">
       <div class="container">
-        <AnimatedHeading level="1">Contact Us</AnimatedHeading>
+        <AnimatedHeading :level="1">Contact Us</AnimatedHeading>
         <p>Get in touch for more information about our projects and the expo</p>
       </div>
     </section>
@@ -128,7 +128,7 @@ onMounted(() => {
       <div class="container">
         <div class="form-container">
           <div class="form-header">
-            <AnimatedHeading level="2">Send Us a Message</AnimatedHeading>
+            <AnimatedHeading :level="2">Send Us a Message</AnimatedHeading>
             <p>Have questions about our projects? Fill out the form below and we'll get back to you as soon as possible.</p>
           </div>
           

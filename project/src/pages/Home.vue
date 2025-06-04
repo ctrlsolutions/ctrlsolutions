@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import AnimatedHeading from '../components/AnimatedHeading.vue'
@@ -9,8 +8,6 @@ import TeamMember from '../components/TeamMember.vue'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const router = useRouter()
-
 const featuredProjects = ref([
   {
     id: 1,
@@ -18,7 +15,8 @@ const featuredProjects = ref([
     description: 'An app that helps restaurants and fruit suppliers manage their inventory using AI. The app uses AI for image recognition to check the freshness of fruits, predict spoilage, and help businesses keep track of their stock to reduce waste. This app was developed during a hackathon and our team placed 8th out of 18 groups.',
     image: 'https://www.fruitsmith.com/pub/media/mageplaza/blog/post/r/e/reasons_that_make_fruit_basket_a_suitable_gift_.jpg',
     technologies: ['Vue.js', 'Django', 'Roboflow'],
-    category: 'Machine Learning'
+    category: 'Machine Learning',
+    link: 'https://supplai.ctrlsolutions.space/'
   },
   {
     id: 2,
@@ -163,7 +161,7 @@ onMounted(() => {
       <div class="container">
         <div class="about-grid">
           <div class="about-content">
-            <AnimatedHeading level="2" class="section-heading">About Us</AnimatedHeading>
+            <AnimatedHeading :level="2" class="section-heading">About Us</AnimatedHeading>
             <p>We are a team of passionate Computer Science students from the University of the Philippines Cebu, brought together through an academic project that sparked our shared enthusiasm for innovation, problem-solving, and technology. What began as a classroom collaboration has grown into a dynamic partnership driven by curiosity and a desire to make meaningful contributions through software development.</p>
             <p>Our team thrives on applying the principles we've learned in our courses to real-world challenges—whether through building intuitive user experiences, developing efficient systems, or exploring emerging technologies. As students of UP Cebu, we value excellence, collaboration, and the spirit of service, and we bring these values into every project we work on.</p>
             <p>This platform allows visitors to explore the diverse range of projects, learn about the technologies used, and connect with the brilliant minds behind each innovation.</p>
@@ -220,7 +218,7 @@ onMounted(() => {
     <!-- Featured Projects Section -->
     <section class="projects-section section">
       <div class="container">
-        <AnimatedHeading level="2" class="section-heading text-center">Featured Projects</AnimatedHeading>
+        <AnimatedHeading :level="2" class="section-heading text-center">Featured Projects</AnimatedHeading>
         <p class="section-subheading text-center">Explore some of our innovative projects</p>
         
         <div class="projects-grid">
@@ -240,7 +238,7 @@ onMounted(() => {
     <!-- Team Section -->
     <section class="team-section section">
       <div class="container">
-        <AnimatedHeading level="2" class="section-heading text-center">Meet Our Team</AnimatedHeading>
+        <AnimatedHeading :level="2" class="section-heading text-center">Meet Our Team</AnimatedHeading>
         <p class="section-subheading text-center">The brilliant minds behind our projects</p>
         
         <div class="team-grid">
@@ -261,7 +259,7 @@ onMounted(() => {
     <section class="cta-section section">
       <div class="container">
         <div class="cta-content">
-          <AnimatedHeading level="2">Ready to See More?</AnimatedHeading>
+          <AnimatedHeading :level="2">Ready to See More?</AnimatedHeading>
           <p>Visit our expo to experience these projects firsthand and connect with our team</p>
           <router-link to="/contact" class="btn btn-primary">Get Expo Details</router-link>
         </div>

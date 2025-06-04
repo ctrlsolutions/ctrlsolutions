@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, onMounted, provide } from 'vue'
-import { useRoute } from 'vue-router'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import NavBar from './components/NavBar.vue'
@@ -11,7 +10,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 const isDarkMode = ref(false)
 const appReady = ref(false)
-const route = useRoute()
 
 provide('isDarkMode', isDarkMode)
 
