@@ -12,7 +12,7 @@ const teamMembers = ref([
     id: 1,
     name: 'Alessandra Gwyneth Busiños',
     role: 'Full Stack Developer',
-    image: 'src/assets/az.jpg',
+    image: 'src/assets/az3.jpg',
     bio: 'Specializes in full stack development.',
     social: {
       github: 'https://github.com/lssndrrr',
@@ -24,12 +24,12 @@ const teamMembers = ref([
     id: 2,
     name: 'Lanieza Marie Lopez',
     role: 'Full Stack Developer',
-    image: 'src/assets/lani.jpg',
+    image: 'src/assets/lanigurl.jpg',
     bio: 'Specializes in full stack development.',
     social: {
-      github: 'https://github.com',
-      linkedin: 'https://linkedin.com',
-      email: 'sarah@example.com'
+      github: 'https://github.com/Lanieza',
+      linkedin: 'https://www.linkedin.com/in/lanieza-marie-b-lopez-09750b28a/',
+      email: 'lblopez@up.edu.ph'
     }
   },
   {
@@ -39,9 +39,9 @@ const teamMembers = ref([
     image: 'src/assets/caleb.jpg',
     bio: 'Specializes in full stack development.',
     social: {
-      github: 'https://github.com',
-      linkedin: 'https://linkedin.com',
-      email: 'michael@example.com'
+      github: 'https://github.com/cajober',
+      linkedin: 'https://www.linkedin.com/in/caleb-josh-berandoy-544370237/',
+      email: 'caleb.berandoy@gmail.com'
     }
   },
   {
@@ -60,12 +60,12 @@ const teamMembers = ref([
     id: 5,
     name: 'Nico Bello',
     role: 'Frontend Developer',
-    image: 'src/assets/nico.jpg',
+    image: 'src/assets/nico2.jpg',
     bio: 'Specializes in frontend development.',
     social: {
-      github: 'https://github.com',
-      linkedin: 'https://linkedin.com',
-      email: 'david@example.com'
+      github: 'https://github.com/ndb3llo',
+      linkedin: 'https://www.linkedin.com/in/nico-bello-ba290526b/',
+      email: 'ndbello@up.edu.ph'
     }
   },
   {
@@ -75,9 +75,9 @@ const teamMembers = ref([
     image: 'src/assets/angel.jpg',
     bio: 'Specializes in frontend development.',
     social: {
-      github: 'https://github.com',
-      linkedin: 'https://linkedin.com',
-      email: 'lisa@example.com'
+      github: 'https://github.com/royalsprites',
+      linkedin: 'www.linkedin.com/in/aasenoron',
+      email: 'aaasenoron@gmail.com'
     }
   }
 ])
@@ -128,9 +128,8 @@ onMounted(() => {
     <section class="join-team-section section">
       <div class="container">
         <div class="join-team-content">
-          <AnimatedHeading level="2">Join Our Team</AnimatedHeading>
+          <AnimatedHeading level="2">The Team</AnimatedHeading>
           <p>We're always looking for talented individuals to join our team. If you're passionate about computer science and innovation, we'd love to hear from you!</p>
-          <a href="#" class="btn btn-primary">View Open Positions</a>
         </div>
       </div>
     </section>

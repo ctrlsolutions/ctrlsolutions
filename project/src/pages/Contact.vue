@@ -96,7 +96,7 @@ onMounted(() => {
               </svg>
             </div>
             <h3>Email</h3>
-            <p><a href="mailto:info@csprojectexpo.com">info@csprojectexpo.com</a></p>
+            <p><a href="mailto:ctrlsolutions@gmail.com">ctrlsolutions@gmail.com</a></p>
           </div>
           
           <div class="info-box">
@@ -106,7 +106,7 @@ onMounted(() => {
               </svg>
             </div>
             <h3>Phone</h3>
-            <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+            <p><a href="tel:09351196398">+63-935-119-6398</a></p>
           </div>
           
           <div class="info-box">
@@ -255,27 +255,40 @@ onMounted(() => {
   }
 }
 
+.contact-info-section {
+  padding: var(--space-6) 0;
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+  }
+}
+
 .info-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--space-4);
+  justify-items: center;
   
-  @media (min-width: 640px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 1fr);
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
   }
 }
 
 .info-box {
+  width: 100%;
+  max-width: 350px;
   background-color: var(--color-surface);
   border-radius: var(--radius-lg);
   padding: var(--space-4);
   text-align: center;
   box-shadow: var(--shadow-md);
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   
   &:hover {
     transform: translateY(-5px);
@@ -297,6 +310,7 @@ onMounted(() => {
   h3 {
     font-size: 1.25rem;
     margin-bottom: var(--space-2);
+    text-align: center;
   }
   
   p {
@@ -304,24 +318,28 @@ onMounted(() => {
     font-size: 0.95rem;
     margin: 0;
     line-height: 1.6;
-  }
-  
-  a {
-    color: var(--color-primary);
+    text-align: center;
     
-    &:hover {
-      text-decoration: underline;
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
 
 .contact-form-section {
   background-color: var(--color-surface);
+  padding: var(--space-6) 0;
 }
 
 .form-container {
   max-width: 700px;
   margin: 0 auto;
+  padding: 0 var(--space-4);
 }
 
 .form-header {
@@ -398,6 +416,38 @@ onMounted(() => {
 .error-message {
   color: var(--color-error);
   padding: var(--space-1) 0;
+  text-align: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+  
+  &-primary {
+    background-color: var(--color-primary);
+    color: white;
+    
+    &:hover {
+      background-color: var(--color-primary-dark);
+    }
+  }
+  
+  &-outline {
+    background-color: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    
+    &:hover {
+      background-color: rgba(0, 102, 204, 0.1);
+    }
+  }
 }
 
 .spinner {
@@ -469,6 +519,7 @@ onMounted(() => {
     text-align: center;
     max-width: 300px;
     box-shadow: var(--shadow-lg);
+    color: black;
     
     h3 {
       font-size: 1.25rem;
@@ -476,15 +527,21 @@ onMounted(() => {
     }
     
     p {
-      color: var(--color-text-secondary);
+      color: black;
       margin-bottom: var(--space-3);
       line-height: 1.6;
     }
-    
-    .btn-outline {
-      border-color: var(--color-primary);
-      color: var(--color-primary);
-    }
   }
+}
+
+.section {
+  padding: var(--space-6) 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
 }
 </style>

@@ -10,6 +10,7 @@ const props = defineProps<{
     image: string
     technologies: string[]
     category: string
+    link: string
   }
 }>()
 
@@ -44,7 +45,7 @@ onMounted(() => {
       <img :src="project.image" :alt="project.title" />
       <div class="project-overlay" :class="{ 'active': isHovered }">
         <div class="project-actions">
-          <router-link :to="`/projects/${project.id}`" class="btn btn-primary">View Project</router-link>
+          <a :href="project.link" target="_blank" rel="noopener" class="btn btn-primary">View Project</a>
         </div>
       </div>
     </div>

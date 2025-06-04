@@ -23,7 +23,8 @@ const projects = ref([
     description: 'A platform that offers legal support and advice to help underrepresented Filipinos access easy-to-understand legal assistance. It started during an academic project and is now being developed for deployment.',
     image: 'https://blog.ipleaders.in/wp-content/uploads/2021/05/judge-hammer-gavel-lf-1-1024x585-1-1.jpg',
     technologies: ['Django', 'Nextjs', 'MyPostgreSQL'],
-    category: 'Web Application'
+    category: 'Web Application',
+    link: 'https://laymanslaw.ctrlsolutions.space/'
   },
   {
     id: 3,
@@ -31,7 +32,8 @@ const projects = ref([
     description: 'web application helps faculty members at the University of the Philippines Cebu create accomplishment reports more easily. It makes data entry simple, keeps the formatting consistent, and automatically generates reports. This saves time and reduces mistakes.',
     image: 'https://irarenas.wordpress.com/wp-content/uploads/2014/02/20160710_151831.jpg',
     technologies: ['Vue', 'Django', 'Axios', 'RestFramework', 'Websockets', 'PostgreSQL'],
-    category: 'Web Application'
+    category: 'Web Application',
+    link: 'https://upload.ctrlsolutions.space/'
   },
 ])
 
